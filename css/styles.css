@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    transform: scale(0.9);
+    transform-origin: center;
+
+    background-image: url('../images/111.jpg');
+    background-size: cover;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+}
+
+.disclaimer {
+    position: fixed;
+    top: 20px;
+    left: -600px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.center {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-top: 20px;
+    position: relative;
+}
+
+.result-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.analysis-item {
+    margin: 15px 0;
+    border-left: 4px solid #4CAF50;
+    padding-left: 10px;
+}
+
+.birth-time {
+    margin-top: 5px;
+}
+
+.loading {
+    position: absolute;
+    top: 288%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: none;
+}
+
+.loading img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(0.8);
+}
+
+.flatpickr-calendar {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+
+#hourInput {
+    font-size: 12px;
+}
+
+#result {
+    display: none;
+}
