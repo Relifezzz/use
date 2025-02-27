@@ -15,6 +15,7 @@ flatpickr("#dateInput", {
 });
 
 
+
 // 周易卦象数据
 const hexagramData = [
 {
@@ -84,6 +85,9 @@ function calculateFortune() {
 
     setTimeout(() => {
         loadingGif.style.display = 'none';
+
+        // 添加虚化背景
+        document.body.classList.add('blur');
 
         const birthDay = birthDate.getDate();
         const birthMonth = birthDate.getMonth() + 1;
@@ -283,187 +287,187 @@ function getRandomHexagram() {
 function getRecommendedProduct() {
     const products = [
         {   name: "Pteris",
-            description: "",
-            url: "https://zensavorr.com/products/red-dwarf-jianzhan-tea-cup",
-            image: "https://zensavorr.com/cdn/shop/files/36.1.webp?v=1740045623&width=600"
+            description: "With its delicate and charming design, the Pteris Jian Zhan Teacup captures the intricate beauty and graceful elegance of ferns. The flowing glaze and natural harmony evoke the lush, feathery fronds of the Pteris fern, enhancing your fortune with the serenity and harmony of nature.",
+            url: "https://zensavorr.com/products/pteris-jianzhan-tea-cup",
+            image: "https://cdn.shopify.com/s/files/1/0920/6022/1713/files/2.1.webp?v=1740047073&width=493"
         },
         {   name: "Bloody eye",
-            description: "",
+            description: "As if allowing you to experience a unique visual experience in the tea fragrance, adding an air of mystery and boldness, it is the perfect choice for those who pursue individuality and taste.",
             url: "https://zensavorr.com/products/bloody-eye-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/1.1_c5ec5982-bdbc-4d27-aaf2-0819d64965b5.webp?v=1740047111&width=600"
         },
         {   name: "Ice Crystal",
-            description: "",
+            description: "It brings a touch of coolness and tranquility, allowing you to find a moment of peace and elegance in the hustle and bustle of life. It is the ideal choice for those who pursue a refined lifestyle.",
             url: "https://zensavorr.com/products/ice-crystal-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/3.1_d6226bb1-3054-461d-94b3-8611f41651dd.webp?v=1740047054&width=600"
         },
         {   name: "Chomper",
-            description: "",
+            description: "It is not only a practical piece of tea - ware, but also a decorative item full of artistic charm. The lively biting action is frozen on the cup body, injecting infinite vitality and creativity into your tea - drinking moments.",
             url: "https://zensavorr.com/products/chomper-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/4.1.webp?v=1740047009&width=600"
         },
         {   name: "Peacock",
-            description: "",
+            description: "Inspired by the vibrant colors of peacock feathers, it allows you to sense the elegance and auspiciousness of the peacock in the tea fragrance, aiding your fortune to soar.",
             url: "https://zensavorr.com/products/peacock-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/37.1.webp?v=1740046984&width=600"
         },
         {   name: "Cosmos Glaze",
-            description: "",
+            description: "It allows you to experience the infinite mysteries and charm of the universe in the tea fragrance, adding a touch of mystery and fantasy to life, and helping your fortune soar like the stars.",
             url: "https://zensavorr.com/products/cosmos-glaze-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/38.1.webp?v=1740046962&width=493"
         },
         {   name: "Deep sea",
-            description: "",
+            description: "It allows you to sense the serenity and mystery of the deep sea, explore its secrets, and inspire boundless imagination about life, enhancing your fortune to be as vast and profound as the deep sea.",
             url: "https://zensavorr.com/products/deep-sea-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/19.1.webp?v=1740046892&width=493"
         },
         {   name: "Isolated Island",
-            description: "",
+            description: "Like a comforter of the soul, it allows you to find a tranquil haven of your own in the hustle and bustle of life, enhancing your fortune to be as serene and resilient as an isolated island.",
             url: "https://zensavorr.com/products/isolated-island-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/26.1.webp?v=1740046854&width=493"
         },
         {   name: "Discerning Eye",
-            description: "",
+            description: "It can help you focus your thoughts, examine life from a clearer perspective, stimulate your wisdom and inspiration, and add a touch of precision and wisdom to your fortune.",
             url: "https://zensavorr.com/products/discerning-eye-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/20.1.webp?v=1740046815&width=493"
         },
         {   name: "Broken eye",
-            description: "",
+            description: "It stimulates your imagination and creativity, allowing you to experience the blend of mystery and fantasy in the tea fragrance, enhancing your fortune to be as deep and vast as the mysterious eye.",
             url: "https://zensavorr.com/products/broken-eye-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/15.1.webp?v=1740046781&width=493"
         },
         {   name: "Jellyfish",
-            description: "",
+            description: "It brings the graceful and light dance of jellyfish before your eyes, enabling you to experience the lightness and elegance of jellyfish in the tea fragrance, stimulating your passion and pursuit for life, and enhancing your fortune to be as graceful and agile as jellyfish.",
             url: "https://zensavorr.com/products/jellyfish-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/25.1.webp?v=1740046738&width=493"
         },
         {   name: "Dandelion",
-            description: "",
+            description: "It brings you a sense of lightness and tranquility, enabling you to experience the delicate beauty of nature in the tea fragrance, adding a touch of poetry and romance to your life, and enhancing your fortune to be as light and free as a dandelion.",
             url: "https://zensavorr.com/products/dandelion-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/27.1.webp?v=1740046702&width=493"
         },
         {   name: "Emerald Amber",
-            description: "",
+            description: "It combines the emerald's lush green with the amber's warm golden glow, bringing you a sense of tranquility and elegance connected to nature, adding a touch of luxury and harmony to life, and enhancing your fortune to be as precious and stable as a natural treasure.",
             url: "https://zensavorr.com/products/emerald-amber-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/5.1.webp?v=1740046613&width=493"
         },
         {   name: "Verdant Ink",
-            description: "",
+            description: "It perfectly blends the lush beauty of nature with the timeless elegance of traditional ink art, enhancing your fortune to flow with unique charm like the harmony between nature and art.",
             url: "https://zensavorr.com/products/verdant-ink-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/10.1_7717381a-d7dc-45ae-b3a4-002c838a54f8.webp?v=1740046565&width=493"
         },
         {   name: "Azure Blossom",
-            description: "",
+            description: "It takes you into a tranquil garden, allowing you to find a peaceful corner in the hustle and bustle of life, enhancing your fortune to be as fresh and elegant as blue and white porcelain.",
             url: "https://zensavorr.com/products/azure-blossom-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/9.1.webp?v=1740046533&width=493"
         },
         {   name: "Yin-Yang",
-            description: "",
+            description: "The unique dual - tone design perfectly embodies the ancient philosophy of yin - yang balance, allowing you to feel the power of harmony and stability in the hustle and bustle of life, and enhancing your fortune to be as harmonious and balanced as yin and yang, steadily improving.",
             url: "https://zensavorr.com/products/yin-yang-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/11.1.webp?v=1740046503&width=493"
         },
         {   name: "Royalty",
-            description: "",
+            description: "A luxurious creation for tea lovers with exceptional taste. Its rich, majestic glaze and intricate details remind one of the grandeur of royal courts and the timeless beauty of regal artifacts, enhancing your fortune to be as noble and stable as royalty.",
             url: "https://zensavorr.com/products/royalty-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/12.1.webp?v=1740046471&width=493"
         },
         {   name: "Peach Blossom",
-            description: "",
+            description: "By capturing the essence of spring's fleeting beauty, it reminds one of blooming peach blossoms, enhancing your fortune to be as full of vitality and energy as spring.",
             url: "https://zensavorr.com/products/peach-blossom-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/14.1.webp?v=1740046444&width=493"
         },
         {   name: "Jurassic",
-            description: "",
+            description: "It takes you back to the ancient world of dinosaurs and primeval landscapes. Its rugged, textured glaze and style of the earth's early days enhance your fortune to be as strong and lasting as the natural forces of the Jurassic era.",
             url: "https://zensavorr.com/products/jurassic-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/23.1.webp?v=1740046378&width=493"
         },
         {   name: "Ethereal Spirit",
-            description: "",
+            description: "Its soft, flowing glaze and gentle presence remind one of the gentle, intangible presence of a spirit, adding an ethereal beauty to your life and enhancing your fortune to be as free and tranquil as a light soul.",
             url: "https://zensavorr.com/products/ethereal-spirit-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/8.1.webp?v=1740046328&width=493"
         },
         {   name: "Nebula",
-            description: "",
+            description: "It captures the ethereal beauty of distant galaxies and star - forming clouds, allowing you to experience the vastness and depth of the universe in the tea fragrance, enhancing your fortune to be as brilliant and mysterious as a nebula.",
             url: "https://zensavorr.com/products/nebula-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/24.1.webp?v=1740046288&width=493"
         },
         {   name: "Crimson Tide",
-            description: "",
+            description: "With its rich, deep red glaze and flowing patterns, it perfectly captures the dynamic beauty of ocean waves. It can bring you a sense of passion and inspiration, enhancing your fortune to surge forward like the waves.",
             url: "https://zensavorr.com/products/crimson-tide-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/17.1.webp?v=1740046244&width=493"
         },
         {   name: "Seal",
-            description: "",
+            description: "A masterpiece that blends tradition and art, it brings you a connection of heritage and craftsmanship, exuding sophistication and cultural significance, enhancing your fortune to be as stable and authoritative as a seal.",
             url: "https://zensavorr.com/products/seal-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/18.1.webp?v=1740046219&width=493"
         },
         {   name: "Dappled Earth",
-            description: "",
+            description: "A tribute to the beauty of nature, it brings you a sense of grounding energy connected to the earth. It allows you to experience the diversity of the earth in the tea fragrance, enhancing your fortune to be as stable and rich as the earth.",
             url: "https://zensavorr.com/products/dappled-earth-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/16.1.webp?v=1740046173&width=493"
         },
         {   name: "Chaos",
-            description: "",
+            description: "Its dynamic, unpredictable glaze and swirling forces of nature evoke the concept of chaos, where order and disorder coexist in perfect harmony. It enhances your fortune to be as full of possibilities as the creativity in chaos.",
             url: "https://zensavorr.com/products/chaos-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/7.1.webp?v=1740046123&width=493"
         },
         {   name: "Celestial",
-            description: "",
+            description: "A captivating ode to the infinite beauty of the night sky. Its deep, cosmic glaze and shimmering patterns remind one of stars and galaxies. It brings an awe - inspiring wonder to your tea - drinking experience, allowing you to explore the mysteries of the universe in every sip.",
             url: "https://zensavorr.com/products/celestial-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/28.1.webp?v=1740046092&width=493"
         },
         {   name: "Scarlet Rose",
-            description: "",
+            description: "It is an embodiment of passion, beauty, and timeless elegance. Its rich, crimson glaze and intricate patterns remind one of the velvety petals of a blooming rose. It enhances your fortune to be as passionate and elegant as a rose.",
             url: "https://zensavorr.com/products/scarlet-rose-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/30.1.webp?v=1740048418&width=493"
         },
         {   name: "Emerald Mountains",
-            description: "",
+            description: "Its rich, verdant glaze and intricate patterns remind one of the lush, rolling hills and misty peaks in ancient Chinese landscapes. It adds a sense of calming energy to your life, enhancing your fortune to be as stable and serene as a mountain.",
             url: "https://zensavorr.com/products/emerald-mountains-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/10.1.webp?v=1740046035&width=493"
         },
         {   name: "Aurora",
-            description: "",
+            description: "An astonishing anthem to the astronomical wonder of the aurora. Its ethereal glaze mimics the shimmering ribbons of light dancing in the night sky, capturing the magic and wonder of the aurora. It enhances your fortune to be as vibrant and unique as the aurora.",
             url: "https://zensavorr.com/products/aurora-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/29.1.webp?v=1740045991&width=493"
         },
         {   name: "Martian Elixir",
-            description: "",
+            description: "A fascinating tribute to the mysterious charm of Mars. Its rich, earthy tones and striking glaze patterns remind one of Mars' rugged landscapes. It brings you a combination of ancient artistry and modern exploration, enhancing your fortune to be as unique and fascinating as Mars.",
             url: "https://zensavorr.com/products/martian-elixir-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/31.1.webp?v=1740045943&width=493"
         },
         {   name: "Jovian Chalice",
-            description: "",
+            description: "This is a masterpiece that can take you into the magnificent realm of Jupiter. Its swirling, storm - like glaze and regal design capture the grandeur and mystery of the universe, allowing you to explore the mysteries of the universe in every sip and elevate your tea - drinking experience to new heights.",
             url: "https://zensavorr.com/products/jovian-chalice-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/33.1.webp?v=1740045922&width=493"
         },
         {   name: "Globe",
-            description: "",
+            description: "This is an astonishing tribute to the beauty and unity of our planet. Its mesmerizing glaze and thoughtful design remind one of the intricate patterns of Earth's continents and oceans, bringing a sense of global harmony and enhancing your fortune to be as vast and beautiful as the Earth.",
             url: "https://zensavorr.com/products/globe-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/21.1.webp?v=1740045878&width=493"
         },
         {   name: "Porcelain Blossom",
-            description: "",
+            description: "This is a perfect blend of elegance and traditional craftsmanship. Its soft, intricate glaze patterns and refined design remind one of the fleeting yet eternal charm of blooming flowers, enhancing your fortune to be as gentle and beautiful as spring flowers.",
             url: "https://zensavorr.com/products/porcelain-blossom-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/34.1.webp?v=1740045835&width=493"
         },
         {   name: "Sulfur Sky",
-            description: "",
+            description: "This is a bold and engaging work created for tea lovers with discerning taste. Its bold and vibrant glaze and exceptional craftsmanship remind one of the dramatic hues of a volcanic sunset, adding a sense of sensory stimulation to your life and enhancing your fortune to be as intense and passionate as the volcanic sky.",
             url: "https://zensavorr.com/products/sulfur-sky-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/35.1.webp?v=1740045747&width=493"
         },
         {   name: "Ringed Planet",
-            description: "",
+            description: "This is an astonishing tribute to the wonders of the universe. It brings a sense of celestial elegance, allowing you to experience the wonders of the universe in the tea fragrance and enhancing your fortune to be as mysterious and majestic as a distant planet.",
             url: "https://zensavorr.com/products/ringed-planet-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/6.1.webp?v=1740045791&width=493"
         },
         {   name: "Abyss",
-            description: "",
+            description: "This is a masterpiece that captures the mystery of the deep sea. Its deep, swirling glazes and hypnotic patterns remind one of the profound mystery of the enigmatic abyssal zone, adding a sense of timeless elegance to your life and enhancing your fortune to be as profound and mysterious as the ocean's depths.",
             url: "https://zensavorr.com/products/abyss-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/32.1.webp?v=1740045713&width=493"
         },
         {   name: "Red Dwarf",
-            description: "",
+            description: "The deep black and bright red blend together, like a red dwarf star in the universe, exuding a unique charm. It allows you to find a quiet starry sky in the hustle and bustle of life, enhancing your fortune to be as brilliant as the stars.",
             url: "https://zensavorr.com/products/red-dwarf-jianzhan-tea-cup",
             image: "https://zensavorr.com/cdn/shop/files/36.1.webp?v=1740045623&width=493"
         },

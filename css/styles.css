@@ -16,6 +16,11 @@ body {
     background-size: 40%;
 }
 
+body.blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
+}
+
 .disclaimer {
     position: fixed;
     top: 20px;
@@ -83,6 +88,13 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+#productRecommendation p {
+    font-size: 14px; /* 调整字体大小 */
+    line-height: 1.8; /* 调整行高 */
+    color: #333; /* 调整颜色 */
+    text-align: center;
+    font-weight: bold; /* 加粗字体 */
+}
 
 
 #hourInput {
